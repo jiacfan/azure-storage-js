@@ -249,9 +249,9 @@ export interface QueueMessage {
  */
 export interface DequeuedMessageItem {
   /**
-   * @member {string} messageId The Id of the Message.
+   * @member {string} messageID The Id of the Message.
    */
-  messageId: string;
+  messageID: string;
   /**
    * @member {Date} insertionTime The time the Message was inserted into the
    * Queue.
@@ -293,9 +293,9 @@ export interface DequeuedMessageItem {
  */
 export interface PeekedMessageItem {
   /**
-   * @member {string} messageId The Id of the Message
+   * @member {string} messageID The Id of the Message
    */
-  messageId: string;
+  messageID: string;
   /**
    * @member {Date} insertionTime The time the Message was inserted into the
    * Queue
@@ -326,9 +326,9 @@ export interface PeekedMessageItem {
  */
 export interface EnqueuedMessage {
   /**
-   * @member {string} messageId The Id of the Message
+   * @member {string} messageID The Id of the Message
    */
-  messageId: string;
+  messageID: string;
   /**
    * @member {Date} insertionTime The time the Message was inserted into the
    * Queue

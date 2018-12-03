@@ -249,9 +249,9 @@ export interface QueueMessage {
  */
 export interface DequeuedMessageItem {
   /**
-   * @member {string} messageID The Id of the Message.
+   * @member {string} messageId The Id of the Message.
    */
-  messageID: string;
+  messageId: string;
   /**
    * @member {Date} insertionTime The time the Message was inserted into the
    * Queue.
@@ -293,12 +293,12 @@ export interface DequeuedMessageItem {
  */
 export interface PeekedMessageItem {
   /**
-   * @member {string} messageID The Id of the Message
+   * @member {string} messageId The Id of the Message.
    */
-  messageID: string;
+  messageId: string;
   /**
    * @member {Date} insertionTime The time the Message was inserted into the
-   * Queue
+   * Queue.
    */
   insertionTime: Date;
   /**
@@ -326,12 +326,12 @@ export interface PeekedMessageItem {
  */
 export interface EnqueuedMessage {
   /**
-   * @member {string} messageID The Id of the Message
+   * @member {string} messageId The Id of the Message.
    */
-  messageID: string;
+  messageId: string;
   /**
    * @member {Date} insertionTime The time the Message was inserted into the
-   * Queue
+   * Queue.
    */
   insertionTime: Date;
   /**
@@ -846,12 +846,12 @@ export interface MessagesPeekOptionalParams extends msRest.RequestOptionsBase {
 
 /**
  * @interface
- * An interface representing MessageIDUpdateOptionalParams.
+ * An interface representing MessageIdUpdateOptionalParams.
  * Optional Parameters.
  *
  * @extends RequestOptionsBase
  */
-export interface MessageIDUpdateOptionalParams extends msRest.RequestOptionsBase {
+export interface MessageIdUpdateOptionalParams extends msRest.RequestOptionsBase {
   /**
    * @member {number} [timeout] The The timeout parameter is expressed in
    * seconds. For more information, see <a
@@ -869,12 +869,12 @@ export interface MessageIDUpdateOptionalParams extends msRest.RequestOptionsBase
 
 /**
  * @interface
- * An interface representing MessageIDDeleteMethodOptionalParams.
+ * An interface representing MessageIdDeleteMethodOptionalParams.
  * Optional Parameters.
  *
  * @extends RequestOptionsBase
  */
-export interface MessageIDDeleteMethodOptionalParams extends msRest.RequestOptionsBase {
+export interface MessageIdDeleteMethodOptionalParams extends msRest.RequestOptionsBase {
   /**
    * @member {number} [timeout] The The timeout parameter is expressed in
    * seconds. For more information, see <a
@@ -1298,11 +1298,11 @@ export interface MessagesPeekHeaders {
 
 /**
  * @interface
- * An interface representing MessageIDUpdateHeaders.
+ * An interface representing MessageIdUpdateHeaders.
  * Defines headers for Update operation.
  *
  */
-export interface MessageIDUpdateHeaders {
+export interface MessageIdUpdateHeaders {
   /**
    * @member {string} [requestId] This header uniquely identifies the request
    * that was made and can be used for troubleshooting the request.
@@ -1336,11 +1336,11 @@ export interface MessageIDUpdateHeaders {
 
 /**
  * @interface
- * An interface representing MessageIDDeleteHeaders.
+ * An interface representing MessageIdDeleteHeaders.
  * Defines headers for Delete operation.
  *
  */
-export interface MessageIDDeleteHeaders {
+export interface MessageIdDeleteHeaders {
   /**
    * @member {string} [requestId] This header uniquely identifies the request
    * that was made and can be used for troubleshooting the request.
@@ -1659,7 +1659,7 @@ export type MessagesPeekResponse = Array<PeekedMessageItem> & MessagesPeekHeader
 /**
  * Contains response data for the update operation.
  */
-export type MessageIDUpdateResponse = MessageIDUpdateHeaders & {
+export type MessageIdUpdateResponse = MessageIdUpdateHeaders & {
   /**
    * The underlying HTTP response.
    */
@@ -1667,14 +1667,14 @@ export type MessageIDUpdateResponse = MessageIDUpdateHeaders & {
       /**
        * The parsed HTTP response headers.
        */
-      parsedHeaders: MessageIDUpdateHeaders;
+      parsedHeaders: MessageIdUpdateHeaders;
     };
 };
 
 /**
  * Contains response data for the deleteMethod operation.
  */
-export type MessageIDDeleteResponse = MessageIDDeleteHeaders & {
+export type MessageIdDeleteResponse = MessageIdDeleteHeaders & {
   /**
    * The underlying HTTP response.
    */
@@ -1682,6 +1682,6 @@ export type MessageIDDeleteResponse = MessageIDDeleteHeaders & {
       /**
        * The parsed HTTP response headers.
        */
-      parsedHeaders: MessageIDDeleteHeaders;
+      parsedHeaders: MessageIdDeleteHeaders;
     };
 };

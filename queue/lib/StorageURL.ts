@@ -11,6 +11,7 @@ import {
   TelemetryPolicyFactory
 } from "./TelemetryPolicyFactory";
 import { UniqueRequestIDPolicyFactory } from "./UniqueRequestIDPolicyFactory";
+import { AxiosHttpClient } from "./utils/AxiosHttpClient";
 
 export { deserializationPolicy };
 
@@ -68,7 +69,7 @@ export abstract class StorageURL {
     ];
 
     return new Pipeline(factories, {
-      HTTPClient: pipelineOptions.httpClient,
+      HTTPClient: pipelineOptions.httpClient || new AxiosHttpClient(),
       logger: pipelineOptions.logger
     });
   }

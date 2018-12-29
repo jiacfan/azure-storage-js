@@ -15,7 +15,7 @@ const banner = [
 
 const nodeRollupConfigFactory = () => {
     return {
-        external: ["@azure/ms-rest-js", "crypto", "fs", "os"],
+        external: ["@azure/ms-rest-js", "axios", "crypto", "fs", "os", "stream", "http", "https"],
         input: "dist-esm/lib/index.js",
         output: {
             file: "dist/index.js",
